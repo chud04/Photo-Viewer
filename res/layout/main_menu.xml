@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:orientation="vertical"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content">
+
+	<TextView
+	android:layout_marginTop="@dimen/bottom_view_spacing_thick"
+	android:layout_marginBottom="@dimen/bottom_view_spacing_thick"
+	android:text="MAIN MENU"
+	android:textSize="25pt"
+	android:layout_height="wrap_content"
+	android:layout_width="match_parent"
+	android:gravity="center_horizontal"/>
+	
+	<Button
+	android:id="@+id/sendMessageButton"
+	android:text="Send a Message"
+	android:textSize="15pt"
+	android:layout_height="wrap_content"
+	android:layout_width="wrap_content"
+	android:layout_gravity="center_horizontal"
+	android:layout_marginTop="@dimen/bottom_view_spacing_thick"
+	android:layout_marginBottom="@dimen/bottom_view_spacing_thick"/>
+	
+	<Button
+	android:id="@+id/viewMessageButton"
+	android:text="View a Received Message"
+	android:textSize="15pt"
+	android:layout_height="wrap_content"
+	android:layout_width="wrap_content"
+	android:layout_gravity="center_horizontal"
+	android:layout_marginTop="@dimen/bottom_view_spacing_thick"
+	android:layout_marginBottom="@dimen/bottom_view_spacing_thick"/>
+	
+</LinearLayout>

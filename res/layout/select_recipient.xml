@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+android:isScrollContainer="true"
+android:layout_height="match_parent"
+android:layout_width="match_parent">
+
+	<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical"
+	android:layout_height="match_parent"
+	android:layout_width="match_parent">
+	
+		<TextView
+		android:text="@string/select_recipient_title"
+		android:layout_height="wrap_content"
+		android:layout_width="wrap_content"
+		android:layout_gravity="center_horizontal"
+		android:layout_marginBottom="@dimen/bottom_view_spacing_thick"/>
+		
+		<LinearLayout
+		android:orientation="horizontal"
+		android:layout_height="wrap_content"
+		android:layout_width="match_parent"
+		android:layout_marginBottom="@dimen/bottom_view_spacing_thick">
+		
+			<TextView
+			android:text="Enter phone number:"
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content"
+			android:layout_marginLeft="@dimen/side_view_spacing_medium"
+			android:layout_marginRight="@dimen/side_view_spacing_medium"/>
+			
+			<EditText
+			android:id="@+id/phoneNumber"
+			android:layout_height="wrap_content"
+			android:layout_width="match_parent"/>
+			<!-- This EditText is for the user to input the phone number if they choose to, instead of selecting a
+			contact on their phone -->
+		
+		</LinearLayout>
+		
+		<TextView
+		android:text="OR"
+		android:layout_height="wrap_content"
+		android:layout_width="wrap_content"
+		android:layout_gravity="center_horizontal"
+		android:layout_marginBottom="@dimen/bottom_view_spacing_thick"/>
+		
+		<LinearLayout
+		android:orientation="horizontal"
+		android:layout_height="wrap_content"
+		android:layout_width="match_parent"
+		android:layout_marginBottom="@dimen/bottom_view_spacing_thick">
+		
+			<TextView
+			android:text="Choose from your contacts:"
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content"
+			android:layout_marginLeft="@dimen/side_view_spacing_medium"
+			android:layout_marginRight="@dimen/side_view_spacing_medium"/>
+			
+			<Button
+			android:id="@+id/chooseContact"
+			android:text="Contacts"
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content"/>
+			<!-- If programmed correctly, this button should launch a custom dialog to allow the user to select a
+			contact from their phone, which will then place that number in the EditText above -->
+			
+		</LinearLayout>
+			
+		<TextView
+		android:id="@+id/contactChosen"
+		android:text="No contact chosen"
+		android:layout_height="wrap_content"
+		android:layout_width="wrap_content"
+		android:layout_gravity="center_horizontal"
+		android:layout_marginBottom="@dimen/bottom_view_spacing_thick"/>
+		<!-- In addition to updating the EditText, the dialog should change this TextView to show the name of the
+		contact, and update the ImageView below to show the thumbnail of the caller id image the user has on their 
+		phone for this contact, if present -->
+		
+		<ImageView
+		android:id="@+id/contactImage"
+		android:src="@drawable/icon"
+		android:layout_height="wrap_content"
+		android:layout_width="wrap_content"
+		android:layout_gravity="center_horizontal"/>
+		
+		<Button
+		android:id="@+id/sendMessageButton"
+		android:text="Send"
+		android:layout_height="wrap_content"
+		android:layout_width="match_parent"
+		android:layout_gravity="bottom"/>
+		<!-- Again, launches an intent, this time to send the message and take you back to the main menu -->
+		
+	</LinearLayout>
+
+</ScrollView>

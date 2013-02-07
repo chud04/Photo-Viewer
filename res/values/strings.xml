@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Working Title</string>
+    <string name="select_message_title">Send a Message</string>
+    <string name="select_recipient_title">Select Recipient</string>
+    <string name="main_menu_title">Main Menu</string>
+    <string name="text_size_mm">mm</string>
+    <string name="text_size_in">in</string>
+    <string name="text_size_px">px</string>
+    <string name="text_style_i">Italics</string>
+    <string name="text_style_b">Bold</string>
+</resources>

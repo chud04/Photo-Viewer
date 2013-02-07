@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<dimen name="side_view_spacing_thin">3dp</dimen>
+	<dimen name="side_view_spacing_medium">6dp</dimen>
+	<dimen name="side_view_spacing_thick">9dp</dimen>
+	<dimen name="bottom_view_spacing_thin">4dp</dimen>
+	<dimen name="bottom_view_spacing_medium">9dp</dimen>
+	<dimen name="bottom_view_spacing_thick">14dp</dimen>
+</resources>
