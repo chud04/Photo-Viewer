@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+android:isScrollContainer="true"
+android:layout_height="match_parent"
+android:layout_width="match_parent">
+
+	<LinearLayout
+	android:orientation="vertical"
+	android:layout_height="wrap_content" 
+	android:layout_width="match_parent">
+	<!-- Main LinearLayout -->
+		<TextView  
+		android:text="@string/title_activity_send_message"
+		android:layout_height="wrap_content" 
+		android:layout_width="wrap_content"
+		android:layout_gravity="center_horizontal"
+		android:layout_marginBottom="@dimen/bottom_view_spacing_medium"/>
+		<!-- Title TextView -->
+		
+		<TextView 
+		android:text="@string/explanation_send_text" 
+		android:layout_height="wrap_content" 
+		android:layout_width="match_parent"
+		android:layout_marginBottom="@dimen/bottom_view_spacing_thin"/>
+	
+		<LinearLayout 
+	    android:orientation="horizontal"
+		android:layout_height="wrap_content" 
+		android:layout_width="match_parent"
+		android:layout_marginBottom="@dimen/bottom_view_spacing_thin">
+		<!-- This is a LinearLayout within the parent LinearLayout to allow for horizontal placement -->
+		
+			<LinearLayout
+			android:orientation="vertical"
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content">
+			
+				<TextView
+				android:layout_height="match_parent"
+				android:layout_width="wrap_content"
+				android:text="@string/prompt_enter_text"
+				android:layout_gravity="center_horizontal"/>
+		
+				<RadioButton
+				android:id="@+id/textChoiceButton"
+				android:clickable="true" 
+				android:layout_height="match_parent" 
+				android:layout_width="wrap_content"/>
+				<!-- One of the two RadioButtons, because if you choose text, it will deselect the pic choice, and 
+				vice-versa -->
+				
+			</LinearLayout>
+			
+			<EditText
+			android:id="@+id/textMessage"
+			android:inputType="textShortMessage"
+			android:maxLines="3"
+			android:layout_height="wrap_content" 
+			android:layout_width="match_parent"
+			android:text="@string/prompt_enter_text"
+			android:layout_gravity="bottom"/>
+			<!-- An EditText where the user places the message to send -->
+			
+		</LinearLayout>
+		
+		<LinearLayout
+	    android:orientation="horizontal"
+		android:layout_height="wrap_content" 
+		android:layout_width="match_parent"
+		android:layout_marginBottom="@dimen/bottom_view_spacing_thin">
+		<!-- This layout contains all of the choices for customizing the text, such as size and color -->
+		
+			<TextView
+			android:text="@string/prompt_enter_size"
+			android:layout_height="wrap_content" 
+			android:layout_width="wrap_content"
+			android:layout_gravity="center"
+			android:layout_marginLeft="@dimen/side_view_spacing_thin"
+			android:layout_marginRight="@dimen/side_view_spacing_thin"/>
+			
+			<EditText
+			android:id="@+id/textSize"
+			android:layout_height="wrap_content" 
+			android:layout_width="60dp"
+			android:maxLines="1"
+			android:maxLength="3"
+			android:inputType="numberDecimal"
+			android:layout_gravity="center"
+			android:layout_marginRight="@dimen/side_view_spacing_thin"/>
+			
+			<Spinner
+			android:id="@+id/textSizeUnitSpinner"
+			android:entries="@array/text_size_unit"
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content"
+			android:layout_gravity="center"
+			android:layout_marginRight="@dimen/side_view_spacing_thick"/>
+			
+			<LinearLayout
+			android:orientation="vertical"
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content"
+			android:layout_marginRight="@dimen/side_view_spacing_thick">
+			
+				<TextView
+				android:text="@string/text_style_i"
+				android:layout_height="match_parent"
+				android:layout_width="wrap_content"
+				android:layout_gravity="center_horizontal"/>
+			
+				<CheckBox
+				android:id="@+id/italicsCheckBox"
+				android:layout_height="wrap_content"
+				android:layout_width="wrap_content"/>
+				
+			</LinearLayout>
+			<!-- The below and above LinearLayouts hold the choices for bold and italic, which are not RadioButtons, 
+			because they are not mutually exclusive -->
+			
+			<LinearLayout
+			android:orientation="vertical"
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content">
+			
+				<TextView
+				android:text="@string/text_style_b"
+				android:layout_height="match_parent"
+				android:layout_width="wrap_content"
+				android:layout_gravity="center_horizontal"/>
+				
+				<CheckBox
+				android:id="@+id/boldCheckBox"
+				android:layout_height="wrap_content"
+				android:layout_width="wrap_content"/>
+				
+			</LinearLayout>
+			
+		</LinearLayout>
+		
+		<LinearLayout
+	    android:orientation="horizontal"
+		android:layout_height="wrap_content" 
+		android:layout_width="match_parent"
+		android:layout_marginBottom="@dimen/bottom_view_spacing_thin">
+		<!-- The layout where the user inputs color information for the text -->
+		
+			<TextView
+			android:text="Color (RRGGBB):"
+			android:layout_height="wrap_content" 
+			android:layout_width="wrap_content"
+			android:layout_marginLeft="@dimen/side_view_spacing_thin"
+			android:layout_marginRight="@dimen/side_view_spacing_thin"/>
+			
+			<EditText
+			android:id="@+id/textColor"
+			android:layout_height="wrap_content" 
+			android:layout_width="94dp"
+			android:maxLines="1"
+			android:maxLength="6"
+			android:inputType="textNoSuggestions"
+			android:layout_marginRight="@dimen/side_view_spacing_medium"/>
+			
+			<TextView
+			android:id="@+id/coloredText"
+			android:text="(Your Text)"
+			android:gravity="center"
+			android:textColor="@android:color/white" 
+			android:background="@android:color/black"
+			android:layout_height="match_parent" 
+			android:layout_width="match_parent"
+			android:layout_marginRight="@dimen/side_view_spacing_medium"/>	
+			
+		</LinearLayout>
+		
+		<TextView
+		android:text="Description of what to do for picture here"
+		android:layout_height="wrap_content" 
+		android:layout_width="match_parent"
+		android:layout_marginBottom="@dimen/bottom_view_spacing_thin"/>
+		<!-- This is the same idea as the whole thing above, but for choosing a picture instead of text -->
+		
+		<LinearLayout
+		android:layout_height="wrap_content" 
+		android:layout_width="match_parent"
+		android:orientation="horizontal"
+		android:layout_marginBottom="@dimen/bottom_view_spacing_thin">
+		
+			<LinearLayout
+			android:orientation="vertical"
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content">
+			
+				<TextView
+				android:layout_height="match_parent"
+				android:layout_width="wrap_content"
+				android:text="Picture"
+				android:layout_gravity="center_horizontal"/>
+		
+				<RadioButton
+				android:id="@+id/picChoiceButton"
+				android:clickable="true" 
+				android:layout_height="match_parent" 
+				android:layout_width="wrap_content"/>
+				
+			</LinearLayout>
+			
+			<Button
+			android:id="@+id/browseButton"
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content"
+			android:layout_gravity="bottom"
+			android:text="Browse"/>
+			<!-- This button is used programmatically to launch an intent to select a picture from the user''-->
+			
+			<TextView
+			android:id="@+id/chosenPicFile"
+			android:layout_height="match_parent"
+			android:layout_width="match_parent"
+			android:layout_gravity="bottom"/>
+		
+		</LinearLayout>
+		
+		<ImageView
+		android:id="@+id/imageThumb"
+		android:layout_height="wrap_content"
+		android:layout_width="wrap_content"
+		android:layout_gravity="center"
+		android:layout_marginBottom="@dimen/bottom_view_spacing_thin"/>
+		<!-- This ImageView is for eventually showing a thumbnail of the picture that the user chose -->
+		
+		<Button
+		android:id="@+id/sendPageButton"
+		android:layout_height="wrap_content"
+		android:layout_width="match_parent"
+		android:text="Continue"/>	
+		<!-- This button launches an intent to go to the next activity, the SelectRecipientActivity -->
+	
+	</LinearLayout>
+
+</ScrollView>

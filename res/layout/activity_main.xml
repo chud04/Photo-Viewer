@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<LinearLayout 
+	android:layout_height="wrap_content" 
+	android:layout_width="wrap_content" 
+	android:orientation="vertical" 
+	xmlns:android="http://schemas.android.com/apk/res/android"> 
+
+<TextView android:layout_height="wrap_content" 
+    android:layout_width="match_parent" 
+    android:gravity="center_horizontal" 
+    android:textSize="25pt" 
+    android:text="@string/title_activity_main_menu" 
+    android:layout_marginBottom="@dimen/bottom_view_spacing_thick" 
+    android:layout_marginTop="@dimen/bottom_view_spacing_thick"/> 
+    
+<Button android:layout_height="wrap_content" 
+    android:layout_width="wrap_content" 
+    android:textSize="15pt" 
+    android:text="@string/title_activity_send_message" 
+    android:layout_marginBottom="@dimen/bottom_view_spacing_thick" 
+    android:layout_marginTop="@dimen/bottom_view_spacing_thick" 
+    android:layout_gravity="center_horizontal" 
+    android:id="@+id/sendMessageButton"/> 
+    
+<Button android:layout_height="wrap_content" 
+    android:layout_width="wrap_content" 
+    android:textSize="15pt" 
+    android:text="@string/title_activity_view_message" 
+    android:layout_marginBottom="@dimen/bottom_view_spacing_thick" 
+    android:layout_marginTop="@dimen/bottom_view_spacing_thick" 
+    android:layout_gravity="center_horizontal" 
+    android:id="@+id/viewMessageButton"/> 
+    
+ </LinearLayout>
